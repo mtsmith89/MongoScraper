@@ -6,8 +6,6 @@ var cheerio = require("cheerio");
 
 var db = require("./models");
 
-var PORT = process.env.PORT || 8080;
-
 var app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -24,6 +22,6 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
-app.listen(PORT, function() {
-  console.log(`This application is running on port: ${PORT}`);
-});
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
