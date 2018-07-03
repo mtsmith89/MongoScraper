@@ -9,8 +9,7 @@ var mongoose = require("mongoose");
 var exphbs = require("express-handlebars");
 var bodyParser = require("body-parser");
 
-// Set up our port to be either the host's designated port, or 3000
-var PORT = process.env.PORT || 3000;
+var port = process.env.PORT || 8080;
 
 // Instantiate our Express App
 var app = express();
@@ -38,6 +37,6 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
 // Listen on the port
-app.listen(PORT, function() {
+app.listen(port, function() {
   console.log("Listening on port: " + PORT);
 });
