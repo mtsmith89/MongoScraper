@@ -1,8 +1,11 @@
-var router = require("express").Router();
-var apiRoutes = require("./api");
-var viewRoutes = require("./view");
+const express = require("express"),
+  router = express.Router(),
+  db = require("../models");
 
-router.use("/api", apiRoutes);
-router.use("/", viewRoutes);
+router.get("/", (req, res) => {
+  db.Article.find({})
+    .then(articles => res.render("index", { articles }))
+    .catch(err => res.json(err));
+});
 
 module.exports = router;

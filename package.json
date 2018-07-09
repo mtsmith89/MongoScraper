@@ -1,28 +1,32 @@
 {
-  "name": "mongoscraper",
+  "name": "nytmongo",
   "version": "1.0.0",
-  "description": "<h4>Home Tab</h4>   <p>The home tab will view all the articles that were 'scraped' from New York Times</p>   <hr>   <h4>Saved Articles Tab</h4>   <p>This tab will direct you to your saved articles</p>   <p>Here you will be able to remove or add notes to the articles you saved</p>   <hr>   <h4>Scrape New Articles Button</h4>   <p>This button will scrape the latest articles on 'New York Times' web-page</p>   <hr>   <h4>Code</h4>   <p>I used cheerio to scrape news article</p>   <p>Used Mongoose to help communicate with Database</p>",
+  "description": "",
   "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.2.1",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mtsmith89/MongoScraper.git"
+    "url": "git+https://github.com/mtsmith89/nytMongo.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mtsmith89/MongoScraper/issues"
+    "url": "https://github.com/mtsmith89/nytMongo/issues"
   },
-  "homepage": "https://github.com/mtsmith89/MongoScraper#readme",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "body-parser": "^1.18.3",
-    "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "mongoose": "^5.2.0"
-  }
+  "homepage": "https://github.com/mtsmith89/nytMongo#readme"
 }
